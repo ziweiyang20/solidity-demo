@@ -11,7 +11,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
     let dataFeedAddr
     let verifyFlag = false
-    if (chainId === 31337) {
+    if (chainId === 31337 || chainId === 1337) {
         const agt = await deployments.get("MockV3Aggregator")
         dataFeedAddr = agt.address
     } else {

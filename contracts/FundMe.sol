@@ -55,7 +55,6 @@ contract FundMe {
 
     function getUsdWithEth(uint256 amount) public view returns (uint256) {
         uint256 ethPrice = getPrice();
-        // console.log(ethPrice);
         return uint256(amount * ethPrice) / 1e18;
     }
 
